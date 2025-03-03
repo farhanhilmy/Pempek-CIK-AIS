@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header dengan logo -->
+    <header>
+        <img src="images/logo.png" alt="Logo Pempek CIK AIS" class="logo">
+        <h1>Keranjang Belanja</h1>
+    </header>
+
+    <!-- Navigasi -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Menu</a></li>
+            <li><a href="keranjang.html" class="active">Keranjang</a></li>
+            <li><a href="pembukuan.html">Pembukuan</a></li>
+        </ul>
+    </nav>
+
+    <!-- Daftar Keranjang -->
+    <main>
+        <h2>Daftar Belanja</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Harga</th>
+                    <th>Jumlah</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="cart-list"></tbody>
+        </table>
+        <p><strong>Total: Rp <span id="total-harga">0</span></strong></p>
+
+        <!-- 🔹 Pilihan Metode Pembayaran -->
+        <h3>Pilih Metode Pembayaran:</h3>
+        <select id="metode-pembayaran">
+            <option value="Tunai">Tunai</option>
+            <option value="Transfer">Transfer</option>
+            <option value="QRIS">QRIS</option>
+        </select>
+
+        <!-- Tombol Aksi -->
+        <div class="button-container">
+            <button onclick="kosongkanKeranjang()" class="btn-danger">Hapus Semua</button>
+            <button id="checkout" class="btn-primary">Bayar</button>
+        </div>
+
+        <!-- 🔹 Tampilan Struk -->
+        <div id="struk-container" class="hidden">
+            <h3>Struk Pembelian</h3>
+            <div id="struk-content"></div>
+            <button onclick="cetakStruk()" class="btn-print">Cetak Struk</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

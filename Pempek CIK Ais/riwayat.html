@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat Transaksi - Pempek CIK AIS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Kasir Pempek CIK AIS</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Menu</a></li>
+            <li><a href="keranjang.html">Keranjang</a></li>
+            <li><a href="riwayat.html" class="active">Riwayat Transaksi</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Riwayat Transaksi</h2>
+        <div class="riwayat-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tanggal</th>
+                        <th>Items</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="riwayat-transaksi"></tbody>
+            </table>
+        </div>
+
+        <h2>Konfirmasi Pembayaran</h2>
+        <form id="form-konfirmasi">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" required>
+
+            <label for="metode">Metode Pembayaran:</label>
+            <select id="metode" required>
+                <option value="Transfer Bank">Transfer Bank</option>
+                <option value="E-Wallet">E-Wallet</option>
+                <option value="Tunai">Tunai</option>
+            </select>
+
+            <label for="bukti">Unggah Bukti Pembayaran:</label>
+            <input type="file" id="bukti" accept="image/*" required>
+
+            <button type="submit" class="btn-success">Konfirmasi</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pempek CIK AIS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

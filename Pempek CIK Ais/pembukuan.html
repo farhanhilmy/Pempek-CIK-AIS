@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembukuan Transaksi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header dengan logo -->
+    <header>
+        <img src="images/logo.png" alt="Logo Pempek CIK AIS" class="logo">
+        <h1>Pembukuan Transaksi</h1>
+    </header>
+
+    <!-- Navigasi -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Menu</a></li>
+            <li><a href="keranjang.html">Keranjang</a></li>
+            <li><a href="pembukuan.html" class="active">Pembukuan</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Riwayat Transaksi</h2>
+
+        <!-- 🔹 Filter Berdasarkan Tanggal -->
+        <div class="filter-container">
+            <label for="filter-date">Pilih Tanggal:</label>
+            <input type="date" id="filter-date">
+            <button id="filter-btn" class="btn-filter">Filter</button>
+        </div>
+
+        <!-- 🔹 Tabel Riwayat Transaksi -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Tanggal</th>
+                    <th>Item</th>
+                    <th>Total</th>
+                    <th>Metode Pembayaran</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="riwayat-transaksi"></tbody>
+        </table>
+
+        <!-- 🔹 Tombol Ekspor ke Excel -->
+        <button id="export-excel" class="btn-export">Ekspor ke Excel</button>
+    </main>
+
+    <!-- 🔹 Library XLSX untuk Ekspor ke Excel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
